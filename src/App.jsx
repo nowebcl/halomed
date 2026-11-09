@@ -626,6 +626,18 @@ export default function App() {
               </div>
             ))}
           </div>
+
+          <div className="section-cta-center">
+            <button
+              type="button"
+              className="btn-navy-pill"
+              onClick={scrollToAgendamiento}
+            >
+              <Icons.Calendar />
+              <span>Agendar mi consulta médica</span>
+              <Icons.ArrowRight />
+            </button>
+          </div>
         </div>
       </section>
 
@@ -684,6 +696,15 @@ export default function App() {
                   <span>Opción efectiva para distintos perfiles de pacientes</span>
                 </li>
               </ul>
+
+              <button
+                type="button"
+                className="btn-treatment-card-cta"
+                onClick={scrollToAgendamiento}
+              >
+                <span>Agendar evaluación médica</span>
+                <Icons.ArrowRight />
+              </button>
             </div>
 
             {/* Card 2: Semaglutida */}
@@ -725,6 +746,15 @@ export default function App() {
                   <span>Una de las opciones más utilizadas en el control de peso.</span>
                 </li>
               </ul>
+
+              <button
+                type="button"
+                className="btn-treatment-card-cta"
+                onClick={scrollToAgendamiento}
+              >
+                <span>Agendar evaluación médica</span>
+                <Icons.ArrowRight />
+              </button>
             </div>
 
             {/* Card 3: Tirzepatida */}
@@ -766,12 +796,240 @@ export default function App() {
                   <span>Opción para pacientes que requieren un mayor control metabólico.</span>
                 </li>
               </ul>
+
+              <button
+                type="button"
+                className="btn-treatment-card-cta"
+                onClick={scrollToAgendamiento}
+              >
+                <span>Agendar evaluación médica</span>
+                <Icons.ArrowRight />
+              </button>
             </div>
+          </div>
+
+          <div className="tratamientos-bottom-cta-banner">
+            <div className="bottom-cta-text">
+              <strong>¿No estás seguro de cuál tratamiento es para ti?</strong>
+              <p>Tu médico especialista evaluará tus antecedentes clínicos y objetivos para recetar la opción más segura y personalizada en tu consulta online.</p>
+            </div>
+            <button
+              type="button"
+              className="btn-navy-pill"
+              onClick={scrollToAgendamiento}
+            >
+              <Icons.Calendar />
+              <span>Evaluar mi caso con un médico</span>
+              <Icons.ArrowRight />
+            </button>
           </div>
         </div>
       </section>
 
-      {/* ================= ACOMPAÑAMIENTO REAL (EXPANDIDO / MÁS ORDENADO) ================= */}
+      {/* ================= ¿CÓMO FUNCIONA? ================= */}
+      <section id="como-funciona" className="pasos-section">
+        <div className="container">
+          <div className="section-eyebrow-center">¿CÓMO FUNCIONA?</div>
+          <h2 className="section-title-center">Tu tratamiento en simples pasos.</h2>
+
+          <div className="pasos-flow-grid">
+            {/* Paso 1 */}
+            <div
+              className="paso-item paso-item-clickable"
+              onClick={scrollToAgendamiento}
+              style={{ cursor: 'pointer' }}
+              title="Haz clic para ir directamente al agendamiento"
+            >
+              <div className="paso-badge-row">
+                <div className="paso-num-circle">1</div>
+                <div className="paso-icon">
+                  <Icons.Calendar />
+                </div>
+              </div>
+              <h3 className="paso-title">Agenda tu consulta</h3>
+              <p className="paso-desc">Elige el día y horario que más te acomode.</p>
+            </div>
+
+            <div className="paso-connector" aria-hidden="true">
+              <Icons.StepArrow />
+            </div>
+
+            {/* Paso 2 */}
+            <div className="paso-item">
+              <div className="paso-badge-row">
+                <div className="paso-num-circle">2</div>
+                <div className="paso-icon">
+                  <Icons.VideoCamera />
+                </div>
+              </div>
+              <h3 className="paso-title">Consulta online</h3>
+              <p className="paso-desc">Te evaluamos por videollamada y definimos el plan de tratamiento.</p>
+            </div>
+
+            <div className="paso-connector" aria-hidden="true">
+              <Icons.StepArrow />
+            </div>
+
+            {/* Paso 3 */}
+            <div className="paso-item">
+              <div className="paso-badge-row">
+                <div className="paso-num-circle">3</div>
+                <div className="paso-icon">
+                  <Icons.PrescriptionFile />
+                </div>
+              </div>
+              <h3 className="paso-title">Recibe tu indicación</h3>
+              <p className="paso-desc">Si está indicado, te enviamos la receta médica digital.</p>
+            </div>
+
+            <div className="paso-connector" aria-hidden="true">
+              <Icons.StepArrow />
+            </div>
+
+            {/* Paso 4 */}
+            <div className="paso-item">
+              <div className="paso-badge-row">
+                <div className="paso-num-circle">4</div>
+                <div className="paso-icon">
+                  <Icons.StepChart />
+                </div>
+              </div>
+              <h3 className="paso-title">Seguimiento continuo</h3>
+              <p className="paso-desc">Controles periódicos para ajustar y acompañar tu progreso.</p>
+            </div>
+          </div>
+
+          <div className="section-cta-center">
+            <button
+              type="button"
+              className="btn-hero-primary"
+              onClick={scrollToAgendamiento}
+            >
+              <Icons.Calendar />
+              <span>Elegir fecha y hora de atención</span>
+              <Icons.ArrowRight />
+            </button>
+          </div>
+        </div>
+      </section>
+
+
+            {/* ================= SECCIÓN DE AGENDAMIENTO ONLINE (RESERVO) ================= */}
+      <section id="agendamiento" className="agendamiento-section">
+        <div id="agendar" className="anchor-offset" />
+        <div className="container">
+          <div className="agendamiento-header-center">
+            <div className="section-eyebrow-center">
+              <span className="live-status-dot" style={{ marginRight: '6px' }} />
+              AGENDAMIENTO OFICIAL EN LÍNEA
+            </div>
+            <h2 className="section-title-center">Agenda tu consulta médica online</h2>
+            <p className="agendamiento-subheading">
+              Selecciona el profesional, día y horario que mejor se adapte a ti a través de nuestra plataforma oficial. Atención médica personalizada por videollamada y emisión de receta médica digital en todo Chile.
+            </p>
+          </div>
+
+          {/* Micro-tarjetas de confianza */}
+          <div className="agendamiento-badges-grid">
+            <div className="agenda-trust-badge">
+              <div className="trust-badge-icon">
+                <Icons.DoctorBadge />
+              </div>
+              <div className="trust-badge-info">
+                <strong>Médicos Registrados</strong>
+                <span>Acreditados por la Superintendencia de Salud</span>
+              </div>
+            </div>
+
+            <div className="agenda-trust-badge">
+              <div className="trust-badge-icon">
+                <Icons.PrescriptionFile />
+              </div>
+              <div className="trust-badge-info">
+                <strong>Receta Digital Oficial</strong>
+                <span>Válida en farmacias físicas y online de todo Chile</span>
+              </div>
+            </div>
+
+            <div className="agenda-trust-badge">
+              <div className="trust-badge-icon">
+                <Icons.ShieldCheck />
+              </div>
+              <div className="trust-badge-info">
+                <strong>Confirmación Inmediata</strong>
+                <span>Cita reservada al instante con recordatorios</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Tarjeta contenedora con la plataforma oficial Reservo */}
+          <div className="agendamiento-card">
+            <div className="agendamiento-card-topbar">
+              <div className="card-topbar-left">
+                <span className="live-status-dot" />
+                <span className="card-topbar-title">Plataforma oficial de reservas médicas</span>
+              </div>
+              <div className="card-topbar-right">
+                <span className="card-topbar-tag">Atención 100% Online</span>
+              </div>
+            </div>
+
+            <div className="reservo-iframe-wrapper">
+              <iframe
+                title="Sistema de Agendamiento Oficial Halomed - Reservo"
+                style={{
+                  overflow: 'hidden',
+                  borderRadius: '10px',
+                  marginBottom: '20px',
+                  width: '100%',
+                  minHeight: '600px',
+                  border: 0,
+                  display: 'block'
+                }}
+                src="https://agendamiento.reservo.cl/makereserva/agenda/p0V3aoG0m049gy1O2N87SKi8K2598G"
+                width="100%"
+                height="600"
+                frameBorder="0"
+              />
+              <div className="reservo-attribution-footer">
+                <a
+                  href="https://www.reservo.cl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="reservo-link"
+                >
+                  Powered by Reservo
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Banner de soporte directo por WhatsApp */}
+          <div className="agendamiento-help-banner">
+            <div className="help-banner-content">
+              <div className="help-banner-icon">
+                <Icons.WhatsApp size={22} />
+              </div>
+              <div className="help-banner-text">
+                <strong>¿Necesitas asistencia con tu reserva o resolver dudas?</strong>
+                <p>Nuestro equipo de soporte Halomed está disponible al <strong>+56 9 2396 3400</strong> para ayudarte a agendar directamente por WhatsApp.</p>
+              </div>
+            </div>
+            <a
+              href="https://wa.me/56923963400?text=Hola%2C%20necesito%20ayuda%20para%20agendar%20mi%20consulta%20m%C3%A9dica%20en%20Halomed"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-help-whatsapp"
+            >
+              <span>WhatsApp +56 9 2396 3400</span>
+              <Icons.ArrowRight />
+            </a>
+          </div>
+        </div>
+      </section>
+
+
+            {/* ================= ACOMPAÑAMIENTO REAL (EXPANDIDO / MÁS ORDENADO) ================= */}
       <section id="telemedicina" className="banner-acompanamiento-section">
         <div className="container">
           <div className="acompanamiento-banner-expanded">
@@ -872,82 +1130,8 @@ export default function App() {
         </div>
       </section>
 
-      {/* ================= ¿CÓMO FUNCIONA? ================= */}
-      <section id="como-funciona" className="pasos-section">
-        <div className="container">
-          <div className="section-eyebrow-center">¿CÓMO FUNCIONA?</div>
-          <h2 className="section-title-center">Tu tratamiento en simples pasos.</h2>
 
-          <div className="pasos-flow-grid">
-            {/* Paso 1 */}
-            <div
-              className="paso-item paso-item-clickable"
-              onClick={scrollToAgendamiento}
-              style={{ cursor: 'pointer' }}
-              title="Haz clic para ir directamente al agendamiento"
-            >
-              <div className="paso-badge-row">
-                <div className="paso-num-circle">1</div>
-                <div className="paso-icon">
-                  <Icons.Calendar />
-                </div>
-              </div>
-              <h3 className="paso-title">Agenda tu consulta</h3>
-              <p className="paso-desc">Elige el día y horario que más te acomode.</p>
-            </div>
-
-            <div className="paso-connector" aria-hidden="true">
-              <Icons.StepArrow />
-            </div>
-
-            {/* Paso 2 */}
-            <div className="paso-item">
-              <div className="paso-badge-row">
-                <div className="paso-num-circle">2</div>
-                <div className="paso-icon">
-                  <Icons.VideoCamera />
-                </div>
-              </div>
-              <h3 className="paso-title">Consulta online</h3>
-              <p className="paso-desc">Te evaluamos por videollamada y definimos el plan de tratamiento.</p>
-            </div>
-
-            <div className="paso-connector" aria-hidden="true">
-              <Icons.StepArrow />
-            </div>
-
-            {/* Paso 3 */}
-            <div className="paso-item">
-              <div className="paso-badge-row">
-                <div className="paso-num-circle">3</div>
-                <div className="paso-icon">
-                  <Icons.PrescriptionFile />
-                </div>
-              </div>
-              <h3 className="paso-title">Recibe tu indicación</h3>
-              <p className="paso-desc">Si está indicado, te enviamos la receta médica digital.</p>
-            </div>
-
-            <div className="paso-connector" aria-hidden="true">
-              <Icons.StepArrow />
-            </div>
-
-            {/* Paso 4 */}
-            <div className="paso-item">
-              <div className="paso-badge-row">
-                <div className="paso-num-circle">4</div>
-                <div className="paso-icon">
-                  <Icons.StepChart />
-                </div>
-              </div>
-              <h3 className="paso-title">Seguimiento continuo</h3>
-              <p className="paso-desc">Controles periódicos para ajustar y acompañar tu progreso.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ================= HISTORIAS REALES (LOOP INFINITO ESTILO HEALIO / HALOMED) ================= */}
+            {/* ================= HISTORIAS REALES (LOOP INFINITO ESTILO HEALIO / HALOMED) ================= */}
       <section id="opiniones" className="historias-section">
         <div className="container">
           <div className="reviews-showcase-card">
@@ -972,123 +1156,26 @@ export default function App() {
                 ))}
               </div>
             </div>
+
+            <div className="reviews-cta-footer">
+              <p className="reviews-cta-text">
+                Únete a los pacientes que ya alcanzaron sus objetivos de salud con apoyo médico certificado.
+              </p>
+              <button
+                type="button"
+                className="btn-navy-pill"
+                onClick={scrollToAgendamiento}
+              >
+                <Icons.Calendar />
+                <span>Agendar consulta online</span>
+                <Icons.ArrowRight />
+              </button>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ================= SECCIÓN DE AGENDAMIENTO ONLINE (RESERVO) ================= */}
-      <section id="agendamiento" className="agendamiento-section">
-        <div id="agendar" className="anchor-offset" />
-        <div className="container">
-          <div className="agendamiento-header-center">
-            <div className="section-eyebrow-center">
-              <span className="live-status-dot" style={{ marginRight: '6px' }} />
-              AGENDAMIENTO OFICIAL EN LÍNEA
-            </div>
-            <h2 className="section-title-center">Agenda tu consulta médica online</h2>
-            <p className="agendamiento-subheading">
-              Selecciona el profesional, día y horario que mejor se adapte a ti a través de nuestra plataforma oficial. Atención médica personalizada por videollamada y emisión de receta médica digital en todo Chile.
-            </p>
-          </div>
 
-          {/* Micro-tarjetas de confianza */}
-          <div className="agendamiento-badges-grid">
-            <div className="agenda-trust-badge">
-              <div className="trust-badge-icon">
-                <Icons.DoctorBadge />
-              </div>
-              <div className="trust-badge-info">
-                <strong>Médicos Registrados</strong>
-                <span>Acreditados por la Superintendencia de Salud</span>
-              </div>
-            </div>
-
-            <div className="agenda-trust-badge">
-              <div className="trust-badge-icon">
-                <Icons.PrescriptionFile />
-              </div>
-              <div className="trust-badge-info">
-                <strong>Receta Digital Oficial</strong>
-                <span>Válida en farmacias físicas y online de todo Chile</span>
-              </div>
-            </div>
-
-            <div className="agenda-trust-badge">
-              <div className="trust-badge-icon">
-                <Icons.ShieldCheck />
-              </div>
-              <div className="trust-badge-info">
-                <strong>Confirmación Inmediata</strong>
-                <span>Cita reservada al instante con recordatorios</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Tarjeta contenedora con la plataforma oficial Reservo */}
-          <div className="agendamiento-card">
-            <div className="agendamiento-card-topbar">
-              <div className="card-topbar-left">
-                <span className="live-status-dot" />
-                <span className="card-topbar-title">Plataforma oficial de reservas médicas</span>
-              </div>
-              <div className="card-topbar-right">
-                <span className="card-topbar-tag">Atención 100% Online</span>
-              </div>
-            </div>
-
-            <div className="reservo-iframe-wrapper">
-              <iframe
-                title="Sistema de Agendamiento Oficial Halomed - Reservo"
-                style={{
-                  overflow: 'hidden',
-                  borderRadius: '10px',
-                  marginBottom: '20px',
-                  width: '100%',
-                  minHeight: '600px',
-                  border: 0,
-                  display: 'block'
-                }}
-                src="https://agendamiento.reservo.cl/makereserva/agenda/p0V3aoG0m049gy1O2N87SKi8K2598G"
-                width="100%"
-                height="600"
-                frameBorder="0"
-              />
-              <div className="reservo-attribution-footer">
-                <a
-                  href="https://www.reservo.cl"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="reservo-link"
-                >
-                  Powered by Reservo
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Banner de soporte directo por WhatsApp */}
-          <div className="agendamiento-help-banner">
-            <div className="help-banner-content">
-              <div className="help-banner-icon">
-                <Icons.WhatsApp size={22} />
-              </div>
-              <div className="help-banner-text">
-                <strong>¿Necesitas asistencia con tu reserva o resolver dudas?</strong>
-                <p>Nuestro equipo de soporte Halomed está disponible para ayudarte a agendar directamente por WhatsApp.</p>
-              </div>
-            </div>
-            <a
-              href="https://wa.me/56900000000?text=Hola%2C%20necesito%20ayuda%20para%20agendar%20mi%20consulta%20m%C3%A9dica%20en%20Halomed"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-help-whatsapp"
-            >
-              <span>Ayuda por WhatsApp</span>
-              <Icons.ArrowRight />
-            </a>
-          </div>
-        </div>
-      </section>
 
       {/* ================= MINIMALIST DARK BLUE FOOTER ================= */}
       <footer className="site-footer">
@@ -1137,6 +1224,16 @@ export default function App() {
                 <span>Agendar consulta online</span>
                 <Icons.ArrowRight />
               </button>
+
+              <a
+                href="https://wa.me/56923963400?text=Hola%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Halomed"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-whatsapp-link"
+              >
+                <Icons.WhatsApp size={16} />
+                <span>WhatsApp: +56 9 2396 3400</span>
+              </a>
             </div>
           </div>
 
@@ -1230,6 +1327,18 @@ export default function App() {
           </div>
         </div>
       )}
+
+      {/* Botón flotante oficial de WhatsApp */}
+      <a
+        href="https://wa.me/56923963400?text=Hola%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20tratamiento%20y%20agendamiento%20Halomed"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="floating-whatsapp-btn"
+        aria-label="Contactar por WhatsApp al +56 9 2396 3400"
+      >
+        <Icons.WhatsApp size={30} />
+        <span className="floating-whatsapp-tooltip">¿Dudas? +56 9 2396 3400</span>
+      </a>
     </div>
   )
 }

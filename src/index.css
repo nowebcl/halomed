@@ -1859,6 +1859,153 @@ button {
   padding-top: 4px;
 }
 
+/* ================= CTA COMPONENT STYLES ================= */
+.section-cta-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
+}
+
+.btn-treatment-card-cta {
+  width: 100%;
+  margin-top: 22px;
+  padding: 11px 18px;
+  border-radius: 999px;
+  background: var(--halo-navy);
+  color: #FFFFFF;
+  font-size: 13px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(8, 53, 96, 0.16);
+  text-decoration: none;
+}
+
+.btn-treatment-card-cta:hover {
+  background: #0C467C;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(8, 53, 96, 0.25);
+}
+
+.btn-treatment-card-cta:active {
+  transform: scale(0.98);
+}
+
+.tratamientos-bottom-cta-banner {
+  margin-top: 36px;
+  background: linear-gradient(135deg, #F0F8FF 0%, #E6F3FD 100%);
+  border: 1.5px solid rgba(0, 150, 214, 0.25);
+  border-radius: 20px;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.tratamientos-bottom-cta-banner .bottom-cta-text strong {
+  display: block;
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--halo-navy);
+  margin-bottom: 6px;
+}
+
+.tratamientos-bottom-cta-banner .bottom-cta-text p {
+  font-size: 13.5px;
+  color: var(--halo-muted);
+  line-height: 1.45;
+  margin: 0;
+  max-width: 620px;
+}
+
+.reviews-cta-footer {
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(220, 234, 246, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.reviews-cta-text {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--halo-navy);
+  margin: 0;
+}
+
+/* Floating WhatsApp Button */
+.floating-whatsapp-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 22px rgba(37, 211, 102, 0.42);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+}
+
+.floating-whatsapp-btn:hover {
+  transform: scale(1.08) translateY(-2px);
+  box-shadow: 0 8px 28px rgba(37, 211, 102, 0.55);
+}
+
+.floating-whatsapp-tooltip {
+  position: absolute;
+  right: 68px;
+  background: #083560;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 8px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 4px 14px rgba(8, 53, 96, 0.2);
+}
+
+.floating-whatsapp-btn:hover .floating-whatsapp-tooltip {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.footer-whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #25D366;
+  font-size: 13.5px;
+  font-weight: 700;
+  margin-top: 14px;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.footer-whatsapp-link:hover {
+  opacity: 0.85;
+  text-decoration: underline;
+}
+
 /* ================= RESPONSIVE DESIGN ================= */
 @media (max-width: 1040px) {
   .nav-links {
@@ -2540,6 +2687,41 @@ html, body {
 
   .footer-credit {
     justify-content: center;
+  }
+
+  /* Responsive CTAs */
+  .tratamientos-bottom-cta-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 22px;
+    gap: 18px;
+  }
+
+  .tratamientos-bottom-cta-banner .btn-navy-pill {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .reviews-cta-footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .reviews-cta-footer .btn-navy-pill {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .floating-whatsapp-btn {
+    bottom: 18px;
+    right: 18px;
+    width: 52px;
+    height: 52px;
+  }
+
+  .floating-whatsapp-tooltip {
+    display: none;
   }
 }
 
