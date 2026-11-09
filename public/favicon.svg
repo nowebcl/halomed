@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 110" fill="none">
+  <defs>
+    <linearGradient id="haloGrad" x1="10" y1="10" x2="110" y2="95" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2BB4F2" />
+      <stop offset="100%" stop-color="#0096D6" />
+    </linearGradient>
+  </defs>
+  <path
+    d="M60 8C29.5 8 8 26.8 8 51.5C8 65.4 15.8 77.6 28.2 85.4L24.5 100.2C23.9 102.6 26.3 104.5 28.5 103.3L45.8 93.6C50.4 94.5 55.1 95 60 95C90.5 95 112 76.2 112 51.5C112 26.8 90.5 8 60 8Z"
+    fill="url(#haloGrad)"
+  />
+  <rect x="52" y="31" width="16" height="41" rx="8" fill="#FFFFFF" />
+  <rect x="39.5" y="43.5" width="41" height="16" rx="8" fill="#FFFFFF" />
+</svg>
