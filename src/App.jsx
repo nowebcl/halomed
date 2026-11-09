@@ -208,6 +208,25 @@ const Icons = {
       <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
     </svg>
   ),
+  MessageChat: ({ size = 26 }) => (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      style={{ flexShrink: 0 }}
+      aria-hidden="true"
+    >
+      <path
+        d="M20 11.5C20 15.6421 16.4183 19 12 19C10.5755 19 9.23724 18.6475 8.08332 18.0312L4 19.5L5.38555 15.6888C4.51528 14.4754 4 13.0456 4 11.5C4 7.35786 7.58172 4 12 4C16.4183 4 20 7.35786 20 11.5Z"
+        fill="#FFFFFF"
+      />
+      <circle cx="8.5" cy="11.5" r="1.3" fill="#0096D6" />
+      <circle cx="12" cy="11.5" r="1.3" fill="#0096D6" />
+      <circle cx="15.5" cy="11.5" r="1.3" fill="#0096D6" />
+    </svg>
+  ),
   WhatsAppSophisticated: ({ size = 28 }) => (
     <svg
       width={size}
@@ -849,94 +868,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* ================= ¿CÓMO FUNCIONA? ================= */}
-      <section id="como-funciona" className="pasos-section">
-        <div className="container">
-          <div className="section-eyebrow-center">¿CÓMO FUNCIONA?</div>
-          <h2 className="section-title-center">Tu tratamiento en simples pasos.</h2>
-
-          <div className="pasos-flow-grid">
-            {/* Paso 1 */}
-            <div
-              className="paso-item paso-item-clickable"
-              onClick={scrollToAgendamiento}
-              style={{ cursor: 'pointer' }}
-              title="Haz clic para ir directamente al agendamiento"
-            >
-              <div className="paso-badge-row">
-                <div className="paso-num-circle">1</div>
-                <div className="paso-icon">
-                  <Icons.Calendar />
-                </div>
-              </div>
-              <h3 className="paso-title">Agenda tu consulta</h3>
-              <p className="paso-desc">Elige el día y horario que más te acomode.</p>
-            </div>
-
-            <div className="paso-connector" aria-hidden="true">
-              <Icons.StepArrow />
-            </div>
-
-            {/* Paso 2 */}
-            <div className="paso-item">
-              <div className="paso-badge-row">
-                <div className="paso-num-circle">2</div>
-                <div className="paso-icon">
-                  <Icons.VideoCamera />
-                </div>
-              </div>
-              <h3 className="paso-title">Consulta online</h3>
-              <p className="paso-desc">Te evaluamos por videollamada y definimos el plan de tratamiento.</p>
-            </div>
-
-            <div className="paso-connector" aria-hidden="true">
-              <Icons.StepArrow />
-            </div>
-
-            {/* Paso 3 */}
-            <div className="paso-item">
-              <div className="paso-badge-row">
-                <div className="paso-num-circle">3</div>
-                <div className="paso-icon">
-                  <Icons.PrescriptionFile />
-                </div>
-              </div>
-              <h3 className="paso-title">Recibe tu indicación</h3>
-              <p className="paso-desc">Si está indicado, te enviamos la receta médica digital.</p>
-            </div>
-
-            <div className="paso-connector" aria-hidden="true">
-              <Icons.StepArrow />
-            </div>
-
-            {/* Paso 4 */}
-            <div className="paso-item">
-              <div className="paso-badge-row">
-                <div className="paso-num-circle">4</div>
-                <div className="paso-icon">
-                  <Icons.StepChart />
-                </div>
-              </div>
-              <h3 className="paso-title">Seguimiento continuo</h3>
-              <p className="paso-desc">Controles periódicos para ajustar y acompañar tu progreso.</p>
-            </div>
-          </div>
-
-          <div className="section-cta-center">
-            <button
-              type="button"
-              className="btn-hero-primary"
-              onClick={scrollToAgendamiento}
-            >
-              <Icons.Calendar />
-              <span>Elegir fecha y hora de atención</span>
-              <Icons.ArrowRight />
-            </button>
-          </div>
-        </div>
-      </section>
-
-
             {/* ================= SECCIÓN DE AGENDAMIENTO ONLINE (RESERVO) ================= */}
       <section id="agendamiento" className="agendamiento-section">
         <div id="agendar" className="anchor-offset" />
@@ -1050,6 +981,96 @@ export default function App() {
           </div>
         </div>
       </section>
+
+
+            {/* ================= ¿CÓMO FUNCIONA? ================= */}
+      <section id="como-funciona" className="pasos-section">
+        <div className="container">
+          <div className="section-eyebrow-center">¿CÓMO FUNCIONA?</div>
+          <h2 className="section-title-center">Tu tratamiento en simples pasos.</h2>
+
+          <div className="pasos-flow-grid">
+            {/* Paso 1 */}
+            <div
+              className="paso-item paso-item-clickable"
+              onClick={scrollToAgendamiento}
+              style={{ cursor: 'pointer' }}
+              title="Haz clic para ir directamente al agendamiento"
+            >
+              <div className="paso-badge-row">
+                <div className="paso-num-circle">1</div>
+                <div className="paso-icon">
+                  <Icons.Calendar />
+                </div>
+              </div>
+              <h3 className="paso-title">Agenda tu consulta</h3>
+              <p className="paso-desc">Elige el día y horario que más te acomode.</p>
+            </div>
+
+            <div className="paso-connector" aria-hidden="true">
+              <Icons.StepArrow />
+            </div>
+
+            {/* Paso 2 */}
+            <div className="paso-item">
+              <div className="paso-badge-row">
+                <div className="paso-num-circle">2</div>
+                <div className="paso-icon">
+                  <Icons.VideoCamera />
+                </div>
+              </div>
+              <h3 className="paso-title">Consulta online</h3>
+              <p className="paso-desc">Te evaluamos por videollamada y definimos el plan de tratamiento.</p>
+            </div>
+
+            <div className="paso-connector" aria-hidden="true">
+              <Icons.StepArrow />
+            </div>
+
+            {/* Paso 3 */}
+            <div className="paso-item">
+              <div className="paso-badge-row">
+                <div className="paso-num-circle">3</div>
+                <div className="paso-icon">
+                  <Icons.PrescriptionFile />
+                </div>
+              </div>
+              <h3 className="paso-title">Recibe tu indicación</h3>
+              <p className="paso-desc">Si está indicado, te enviamos la receta médica digital.</p>
+            </div>
+
+            <div className="paso-connector" aria-hidden="true">
+              <Icons.StepArrow />
+            </div>
+
+            {/* Paso 4 */}
+            <div className="paso-item">
+              <div className="paso-badge-row">
+                <div className="paso-num-circle">4</div>
+                <div className="paso-icon">
+                  <Icons.StepChart />
+                </div>
+              </div>
+              <h3 className="paso-title">Seguimiento continuo</h3>
+              <p className="paso-desc">Controles periódicos para ajustar y acompañar tu progreso.</p>
+            </div>
+          </div>
+
+          <div className="section-cta-center">
+            <button
+              type="button"
+              className="btn-hero-primary"
+              onClick={scrollToAgendamiento}
+            >
+              <Icons.Calendar />
+              <span>Elegir fecha y hora de atención</span>
+              <Icons.ArrowRight />
+            </button>
+          </div>
+        </div>
+      </section>
+
+
 
 
             {/* ================= ACOMPAÑAMIENTO REAL (EXPANDIDO / MÁS ORDENADO) ================= */}
@@ -1359,8 +1380,8 @@ export default function App() {
         className="floating-whatsapp-btn"
         aria-label="Contactar por WhatsApp al +56 9 2396 3400"
       >
-        <Icons.WhatsAppSophisticated size={28} />
-        <span className="floating-whatsapp-tooltip">¿Dudas? +56 9 2396 3400</span>
+        <Icons.MessageChat size={28} />
+        <span className="floating-whatsapp-tooltip">Enviar mensaje (+56 9 2396 3400)</span>
       </a>
     </div>
   )
