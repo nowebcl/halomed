@@ -208,6 +208,29 @@ const Icons = {
       <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
     </svg>
   ),
+  WhatsAppSophisticated: ({ size = 28 }) => (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      style={{ flexShrink: 0 }}
+      aria-hidden="true"
+    >
+      <path
+        d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"
+        fill="rgba(255, 255, 255, 0.25)"
+        stroke="#FFFFFF"
+        strokeWidth="1.6"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M8.53 7.33c-.16 0-.43.06-.66.31c-.22.25-.87.86-.87 2.07c0 1.22.89 2.39 1 2.56c.14.17 1.76 2.67 4.25 3.73c.59.27 1.05.42 1.41.53c.59.19 1.13.16 1.56.1c.48-.07 1.46-.6 1.67-1.18s.21-1.07.15-1.18c-.07-.1-.23-.16-.48-.27c-.25-.14-1.47-.74-1.69-.82c-.23-.08-.37-.12-.56.12c-.16.25-.64.81-.78.97c-.15.17-.29.19-.53.07c-.26-.13-1.06-.39-2-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.12-.24-.01-.39.11-.5c.11-.11.27-.29.37-.44c.13-.14.17-.25.25-.41c.08-.17.04-.31-.02-.43c-.06-.11-.56-1.35-.77-1.84c-.2-.48-.4-.42-.56-.43c-.14 0-.3-.01-.47-.01"
+        fill="#FFFFFF"
+      />
+    </svg>
+  ),
   WhatsApp: ({ size = 18 }) => (
     <svg
       width={size}
@@ -1226,13 +1249,14 @@ export default function App() {
               </button>
 
               <a
-                href="https://wa.me/56923963400?text=Hola%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Halomed"
+                href="https://www.instagram.com/halomedtelemedicina/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="footer-whatsapp-link"
+                className="footer-instagram-link"
+                title="Síguenos en Instagram @halomedtelemedicina"
               >
-                <Icons.WhatsApp size={16} />
-                <span>WhatsApp: +56 9 2396 3400</span>
+                <Icons.Instagram />
+                <span>Síguenos en Instagram</span>
               </a>
             </div>
           </div>
@@ -1253,9 +1277,8 @@ export default function App() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer-author-link"
-                title="Visitar Instagram de noweb.dev"
+                title="noweb.dev"
               >
-                <Icons.Instagram />
                 <strong>noweb.dev</strong>
               </a>
             </div>
@@ -1336,7 +1359,7 @@ export default function App() {
         className="floating-whatsapp-btn"
         aria-label="Contactar por WhatsApp al +56 9 2396 3400"
       >
-        <Icons.WhatsApp size={30} />
+        <Icons.WhatsAppSophisticated size={28} />
         <span className="floating-whatsapp-tooltip">¿Dudas? +56 9 2396 3400</span>
       </a>
     </div>

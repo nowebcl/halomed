@@ -1952,19 +1952,25 @@ button {
   width: 58px;
   height: 58px;
   border-radius: 50%;
-  background: #25D366;
+  background: linear-gradient(135deg, var(--halo-cyan) 0%, var(--halo-blue) 100%);
   color: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 6px 22px rgba(37, 211, 102, 0.42);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 8px 24px rgba(0, 150, 214, 0.38), 0 2px 6px rgba(8, 53, 96, 0.12);
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease, background 0.2s ease;
   text-decoration: none;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
 }
 
 .floating-whatsapp-btn:hover {
-  transform: scale(1.08) translateY(-2px);
-  box-shadow: 0 8px 28px rgba(37, 211, 102, 0.55);
+  transform: scale(1.08) translateY(-3px);
+  background: linear-gradient(135deg, #24A7E3 0%, #0088C3 100%);
+  box-shadow: 0 12px 30px rgba(0, 150, 214, 0.52), 0 4px 10px rgba(8, 53, 96, 0.18);
+}
+
+.floating-whatsapp-btn:active {
+  transform: scale(0.96);
 }
 
 .floating-whatsapp-tooltip {
@@ -1989,21 +1995,38 @@ button {
   transform: translateX(0);
 }
 
-.footer-whatsapp-link {
+.footer-instagram-link {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #25D366;
-  font-size: 13.5px;
-  font-weight: 700;
+  color: #DDF2FE;
+  font-size: 13px;
+  font-weight: 600;
   margin-top: 14px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   text-decoration: none;
-  transition: opacity 0.2s ease;
+  transition: all 0.2s ease;
+  width: fit-content;
 }
 
-.footer-whatsapp-link:hover {
-  opacity: 0.85;
-  text-decoration: underline;
+.footer-instagram-link:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(43, 180, 242, 0.5);
+  color: #FFFFFF;
+  transform: translateY(-1px);
+}
+
+.footer-instagram-link svg {
+  color: var(--halo-cyan);
+  transition: transform 0.2s ease;
+}
+
+.footer-instagram-link:hover svg {
+  transform: scale(1.12);
+  color: #FFFFFF;
 }
 
 /* ================= RESPONSIVE DESIGN ================= */
